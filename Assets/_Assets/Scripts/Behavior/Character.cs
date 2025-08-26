@@ -15,6 +15,9 @@ public class Character : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
+    private int jumpCount;
+    private int maxJumpCount = 2;
+    
     
     private void Start()
     {
@@ -24,6 +27,9 @@ public class Character : MonoBehaviour
     private void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        if (isGrounded)
+            jumpCount = 0;
+        
         moveInput = 0f;
         if (Input.GetKey(KeyCode.A))
         {
@@ -35,9 +41,10 @@ public class Character : MonoBehaviour
             moveInput = 1f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpCount++;
         }
     }
 

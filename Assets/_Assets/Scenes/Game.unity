@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 374820191}
   - component: {fileID: 374820190}
   - component: {fileID: 374820189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 976805104}
   - component: {fileID: 976805103}
   - component: {fileID: 976805105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1271,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8774957972575327511, guid: ef9e1a9a776840647b02404f210a20d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6
+      value: -3.563
       objectReference: {fileID: 0}
     - target: {fileID: 8774957972575327511, guid: ef9e1a9a776840647b02404f210a20d9, type: 3}
       propertyPath: m_LocalPosition.z
